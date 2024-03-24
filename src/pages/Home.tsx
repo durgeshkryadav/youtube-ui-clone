@@ -7,6 +7,7 @@ import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { getHomePageVideos } from "../store/reducers/getHomePageVideos";
 import { HomePageVideos } from "../Types";
 import Sidebar from "../components/Sidebar";
+import { clearVideos } from "../store";
 
 export default function Home() {
   const dispatch = useAppDispatch();
@@ -14,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     return () => {
-      // dispatch(clearVideos());
+      dispatch(clearVideos());
     };
   }, [dispatch]);
 
