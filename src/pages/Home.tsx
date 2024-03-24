@@ -10,6 +10,8 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getHomePageVideos(false));
+    console.log(videos);
+    
   }, [dispatch]);
   return (
     <div className='max-h-screen overflow-hidden'>
